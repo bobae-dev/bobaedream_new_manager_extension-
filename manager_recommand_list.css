@@ -1,0 +1,52 @@
+.redButtons {
+    color: red;
+    padding: 3px;
+    border: 1px solid red;
+    border-radius: 2px;
+    margin: 3px;
+    height: 24px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.keywords {
+    border: 1px solid gray;
+    border-radius: 2px;
+    margin: 3px;
+    padding: 3px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.inputKeywords {
+    margin: 3px;
+    width: 50px;
+    height: 24px;
+}
+
+.floatRight {
+    float: right;
+}
+
+.delkeyword {
+    background-color: red;
+    color: white;
+}
+
+.autoRecommandDiv {
+    width: 988px;
+    border: 1px solid gray;
+    padding: 5px;
+    margin: 10px 0px;
+}
+
+hr {
+    background-color: gray;
+    border: 0px;
+    height: 1px;
+}
+
+p {
+    margin : 0px;
+}

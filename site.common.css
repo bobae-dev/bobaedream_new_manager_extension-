@@ -1,0 +1,12 @@
+.redButtons {
+    color: red;
+    background-color: white;
+    padding: 3px;
+    border: 1px solid red;
+    border-radius: 2px;
+    margin: 3px;
+    height: 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+}

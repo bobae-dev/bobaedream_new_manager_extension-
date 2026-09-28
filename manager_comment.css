@@ -1,0 +1,49 @@
+.redButtons {
+    color: red;
+    padding: 3px;
+    border: 1px solid red;
+    border-radius: 2px;
+    margin: 3px;
+    height: 24px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.keywords {
+    border: 1px solid gray;
+    border-radius: 2px;
+    margin: 3px;
+    padding: 3px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.inputKeywords {
+    margin: 3px;
+    width: 300px;
+    height: 24px;
+}
+
+.floatRight {
+    float: right;
+}
+
+.delkeyword {
+    background-color: red;
+    color: white;
+}
+
+.autoDeleteDiv {
+    width: 1320px;
+    border: 1px solid gray;
+    padding: 5px;
+    margin-top: 10px;
+
+}
+
+hr {
+    background-color: gray;
+    border: 0px;
+    height: 1px;
+}

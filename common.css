@@ -1,0 +1,19 @@
+.writerInfoViewButton {
+    position: absolute;
+    right : 5px;
+    color: red;
+}
+
+.redButtons {
+    color: red;
+    border:1px solid red;
+    border-radius: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding : 2px;
+    cursor: pointer;
+}
+
+td {
+    position: relative;
+}

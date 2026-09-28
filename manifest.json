@@ -1,0 +1,158 @@
+{
+  "short_name": "bobaemanager",
+  "name": "Bobaedream Manager Helper",
+  "description": "보배드림 관리자 도우미 익스텐션",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "bobae16.png",
+    "48": "bobae48.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab", 
+    "scripting",
+    "contextMenus",
+    "downloads"
+  ],
+  "host_permissions": [
+    "*://*/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.bobaedream.co.kr/list*"],
+      "js": ["user_list.js"],
+      "css" : ["common.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://*.bobaedream.co.kr/view*"],
+      "js": ["user_view.js"],
+      "css" : ["common.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://xkfxksid.bobaedream.co.kr/supermanager/index.php?*sub=mycomment_new_list*"],
+      "js": ["manager_comment.js"],
+      "css" : ["manager_comment.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://xkfxksid.bobaedream.co.kr/supermanager/_menu03/board/recommand_list.php?*No=*"],
+      "js": ["manager_recommand_list.js"],
+      "css" : ["manager_recommand_list.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://xkfxksid.bobaedream.co.kr/supermanager/index.php?main=menu03&menu=04&sub=board_list&board=*"],
+      "js": ["manager_article_List.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://xkfxksid.bobaedream.co.kr/supermanager/index.php?main=menu01&menu=02&sub=mycar_regist&gubun=*"],
+      "js": ["Manager_importToBobae.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://www.bobaedream.co.kr/mycar/mycar_self_step1.php?gubun=*"],
+      "js": ["user_importToBobae.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://fem.encar.com/cars/detail/*"],
+      "js": ["site.encar.com.js"],
+      "css" : ["site.common.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://fem.encar.com/cars/option/*"],
+      "js": ["site.encar.option.js"],
+      "css" : ["site.common.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://carmanager.co.kr/PopupFrame/CarDetailEnc/"],
+      "js": ["site.carmanager.co.kr.js"],
+      "css" : ["site.common.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://www.ggauto.co.kr/carsearch/viewInfo.asp?DemoNo=*"],
+      "js": ["site.ggauto.co.kr.js"],
+      "css" : ["site.common.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://www.koreacarmarket.com/car/carView.html*"],
+      "js": ["site.koreacarmarket.com.js"],
+      "css" : ["site.common.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://www.motorauthority.com/news?i=1", "*://carview.yahoo.co.jp/news/?i=1", "*://www.motor1.com/news/?i=1"],
+      "js": ["autoscrap.collectUrls.js"],
+      "css" : ["site.common.css"],
+      "run_at": "document_end"
+    },    
+    {
+      "matches": ["*://www.motorauthority.com/news/*"],
+      "js": ["site.motorauthority.com.news.detail.js"],
+      "css" : ["site.common.css"],
+      "run_at": "document_end"
+    },  
+    {
+      "matches": ["*://carview.yahoo.co.jp/news/detail/*"],
+      "js": ["site.carview.yahoo.co.jp.js"],
+      "css" : ["site.common.css"],
+      "run_at": "document_end"
+    },  
+    {
+      "matches": ["*://www.motor1.com/news/*"],
+      "js": ["site.motor1.com.js"],
+      "css" : ["site.common.css"],
+      "run_at": "document_end"
+    }, 
+    {
+      "matches": ["*://www.carscoops.com/*"],
+      "js": ["site.carscoops.com.detail.js"],
+      "css" : ["site.common.css"],
+      "run_at": "document_end"
+    }, 
+    {
+      "matches": ["*://aagag.com/issue/?idx=*"],
+      "js": ["site.aagag.com.js"],
+      "css" : ["site.common.css"],
+      "run_at": "document_end"
+    }, 
+    {
+      "matches": ["*://www.fmkorea.com/best/*"],
+      "js": ["site.fmkorea.com.js"],
+      "css" : ["site.common.css"],
+      "run_at": "document_end"
+    }, 
+    {
+      "matches": ["*://ggoorr.net/*/*"],
+      "js": ["site.ggoorr.net.js"],
+      "css" : ["site.ggoorr.net.css"],
+      "run_at": "document_end"
+    }, 
+    {
+      "matches": ["*://gall.dcinside.com/board/view/?*"],
+      "js": ["site.dcinside.com.js"],
+      "css" : ["common.css"],
+      "run_at": "document_end"
+    }, 
+    {
+      "matches": ["*://www.bobaedream.co.kr/board/bulletin/write*"],
+      "js": ["user_write.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
+
